@@ -1,0 +1,9 @@
+{
+  "name": "rft_webshop",
+  "version": "0.0.0",
+  "description": "RFT_Webshop",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
