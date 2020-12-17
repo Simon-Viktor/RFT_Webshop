@@ -1,2 +1,5 @@
 .env
 npm
+node_modules
+bin/
+obj/
