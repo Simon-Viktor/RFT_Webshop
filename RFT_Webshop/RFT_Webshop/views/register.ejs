@@ -1,17 +1,82 @@
-<h1>Register</h1>
-<form action="/register" method="POST">
-	<div>
-		<label for="name">Name</label>
-		<input type="text" id="name" name="name" required></input>
+<title>RFT & Módszertan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>	
+	body,h1 {font-family: "Raleway", sans-serif}
+	body, html {height: 100%}
+	.bgimg {
+		background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+	}
+	button[type=submit]{
+		background-color: #2b812e;
+		border: none;
+		color: white;
+		padding: 14px 26px;
+		text-decoration: none;
+		margin: 4px 2px;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	button:hover{		
+		background-color: #ffffff;
+		color: rgb(0, 0, 0);
+	}
+	.form {
+		width: 420px;
+		height: 460px;
+		background: #095f8a;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		transform: translate(-50%,50%);
+		padding: 30px 30px;	
+		box-sizing: border-box;
+		border-radius: 25px;
+	}
+	h1{
+		margin: 0;
+		padding: 0 0 15px;
+		text-align: center;
+	}
+	input{
+		width: 100%;
+		margin-bottom: 20px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #ffffff;
+		caret-color: orange;
+		color: #ffffff;
+		outline: none;
+		height: 40px;
+		font-size: 16px;
+	}
+</style>
+
+<body>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+		<div class="form w3-display-middle">
+			<h1>Register</h1>
+			<form action="/register" method="POST">
+				<div>
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required></input>
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required></input>
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required></input>
+				</div>
+				<button type="submit">Register</button>
+			</form>
+			<a href="/login">Login</a>
+		</div>	
 	</div>
-	<div>
-		<label for="email">Email</label>
-		<input type="email" id="email" name="email" required></input>
-	</div>
-	<div>
-		<label for="password">Password</label>
-		<input type="password" id="password" name="password" required></input>
-	</div>
-	<button type="submit">Register</button>
-</form>
-<a href="/login">Login</a>
+</body>

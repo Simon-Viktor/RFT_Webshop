@@ -1,14 +1,74 @@
-<header>
-<div style="display:flex;">
-	<form action="/register" method="GET"><button type="submit">Register</button></form>
-	<form action="/login" method="GET"><button type="submit">Log In</button></form>
-	<form action="/cart" method="GET"><button type="submit">Cart</button></form>
-	<form action="/logout?_method=DELETE" method="POST"><button type="submit">Log Out</button></form>
+<title>RFT & Módszertan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>	
+	body,h1 {font-family: "Raleway", sans-serif}
+	body, html {height: 100%}
+	.bgimg {
+		background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+		min-height: 100%;
+		background-position: center;
+		background-size: cover;
+	}
+	button[type=submit]{
+		background-color: #2b812e;
+		border: none;
+		color: white;
+		padding: 14px 26px;
+		text-decoration: none;
+		margin: 4px 2px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	button:hover{		
+		background-color: #ffffff;
+		color: rgb(0, 0, 0);
+	}
+</style>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+	<header>
+		<div style="display:flex;" class="w3-display-topright">
+			<form action="/register" method="GET"><button type="submit">Register</button></form>
+			<form action="/login" method="GET"><button type="submit">Log In</button></form>
+			<form action="/cart" method="GET"><button type="submit">Cart</button></form>
+			<form action="/logout?_method=DELETE" method="POST"><button type="submit">Log Out</button></form>
+		</div>
+	</header>
+	<!-- TODO - take that header part and make it into a more dynamic version (if there is a logged-in user, it should say different things, if there isn't, then what's currently there) -->
+	<body>
+		<div class="w3-display-middle">
+			<h1 class="w3-jumbo w3-animate-top" id="soon">COMING SOON</h1>		
+			<hr class="w3-border-grey" style="margin:auto;width:40%">
+			<h2 class="w3-large w3-center" id="countdown"></h2>
+			<script>
+				var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
+					
+				var x = setInterval(function() {
+						
+					var now = new Date().getTime();
+							
+					var distance = countDownDate - now;
+								
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+							
+					document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
+						+ minutes + "M " + seconds + "S ";
+								
+					if (distance < 0) {
+						clearInterval(x);
+						document.getElementById("soon").innerHTML = "Happy New Year!";
+						document.getElementById("countdown").innerHTML = "";
+					}
+				}, 1000);
+			</script>
+		</div>
+	</body>
 </div>
-</header>
-<!-- TODO - take that header part and make it into a more dynamic version (if there is a logged-in user, it should say different things, if there isn't, then what's currently there) -->
-<body>
-	<h1>TODO - make the primitive layout here</h1>
-</body>
 <tail>
 </tail>

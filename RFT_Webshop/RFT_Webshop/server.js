@@ -10,6 +10,7 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
+const dotenv = require('dotenv').config()
 
 const initPP = require('./passport-config')
 initPP(
